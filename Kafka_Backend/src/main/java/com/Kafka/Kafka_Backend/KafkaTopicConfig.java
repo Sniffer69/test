@@ -11,4 +11,11 @@ public class KafkaTopicConfig {
                 .partitions(10)
                 .build();
     }
+    @Bean
+    public NewTopic kafkaJsonTopic(){
+        return TopicBuilder.name("KannelJson")
+                .partitions(10)
+                .build();
+    }
 }
+
