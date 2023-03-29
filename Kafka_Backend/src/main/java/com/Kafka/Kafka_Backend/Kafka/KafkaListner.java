@@ -1,4 +1,4 @@
-package com.Kafka.Kafka_Backend;
+package com.Kafka.Kafka_Backend.Kafka;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

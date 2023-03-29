@@ -1,15 +1,15 @@
-package com.Kafka.Kafka_Backend;
+package com.Kafka.Kafka_Backend.Kafka_Json;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "UserDate")
+@Table(name = "user_data")
 public class User {
     @Id
     private int id;
-    private String fname;
+    public String fname;
     private String lname;
     private String address;
     private String email;
