@@ -1,13 +1,12 @@
 package com.Kafka.Kafka_Backend.Kafka_Json;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "user_data")
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     public String fname;
     private String lname;
