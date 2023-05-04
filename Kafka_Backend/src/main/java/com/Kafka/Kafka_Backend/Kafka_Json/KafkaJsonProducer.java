@@ -36,7 +36,7 @@ public class KafkaJsonProducer {
 //        kafkaJsonRepo.save(data);
         Message<User> message = MessageBuilder
                 .withPayload(data)
-                .setHeader(KafkaHeaders.TOPIC, "Test")
+                .setHeader(KafkaHeaders.TOPIC, "kannel")
                 .build();
 
 
@@ -45,7 +45,7 @@ public class KafkaJsonProducer {
         List<Integer> partitionNumbers = new ArrayList<>();
         for (PartitionInfo partition : partitions) {
             int key = data.getId();
-            ProducerRecord p = new ProducerRecord<>("KannelTest",partition.partition(),null ,data);
+            ProducerRecord p = new ProducerRecord<>("kannel",partition.partition(),null ,data);
             kafkaTemplate.send(p);
         }
 

@@ -23,7 +23,7 @@ public class KafkaJsonListner {
 //
 //    }
 
-    @KafkaListener(topics = "KannelTest", groupId = "myGroup")
+    @KafkaListener(topics = "kannel", groupId = "myGroup")
     public HttpStatus listenjsonmsg(User user){
         LOGGER.info(String.format("Json Consumed msg: %s",user.toString()));
         return HttpStatus.ACCEPTED;

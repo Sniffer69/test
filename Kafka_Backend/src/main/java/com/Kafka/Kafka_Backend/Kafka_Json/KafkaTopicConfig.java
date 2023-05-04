@@ -63,7 +63,7 @@ public class KafkaTopicConfig {
     @Bean
     public KafkaAdminClient kafkaAdminClient() {
         Properties configProps = new Properties();
-        configProps.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        configProps.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "3.7.224.105:9092");
         configProps.put(ConsumerConfig.GROUP_ID_CONFIG, "myGroup");
 
 //        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());

@@ -79,7 +79,7 @@ public class KafkaJsonController {
         NewTopic newTopic = new NewTopic(topicName, 10, (short) 1);
         Properties props = new Properties();
 
-        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "3.7.224.105:9092");
         props.put(ConsumerConfig.GROUP_ID_CONFIG, "myGroup");
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
@@ -104,7 +104,7 @@ public class KafkaJsonController {
         if (deleteTopic) {
             // Set up the AdminClient properties
             Properties properties = new Properties();
-            properties.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092"); // Change this to your Kafka broker address
+            properties.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, "3.7.224.105:9092"); // Change this to your Kafka broker address
             properties.put(AdminClientConfig.CLIENT_ID_CONFIG, "myGroupr");
 
             // Create the AdminClient
